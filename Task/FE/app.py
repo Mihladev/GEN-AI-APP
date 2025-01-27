@@ -1,3 +1,6 @@
+def funPack():
+    pip install streamlit==1.24.0 fastapi==0.95.1 uvicorn[standard]==0.22.0 transformers==4.28.1 torch==2.1.0 sentencepiece==0.1.97 wordcloud==1.9.2 matplotlib==3.7.3 pydantic==1.10.7 requests==2.28.2 numpy==1.24.3 pandas==2.2.3 python-multipart==0.0.6
+funPack()
 import streamlit as st
 import pandas as pd
 import requests
