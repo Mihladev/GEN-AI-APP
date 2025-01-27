@@ -1,27 +1,3 @@
-import subprocess
-import sys
-import logging
-
-# Set up logging
-logging.basicConfig(level=logging.DEBUG)
-
-# Install dependencies if they're not already installed
-def install(package):
-    try:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Failed to install {package}: {e}")
-        raise  # re-raise the exception to stop the app
-
-# Specify the path to requirements.txt (adjust as needed)
-requirements_path = 'Task/requirements.txt'  # Change this path to where your requirements.txt is located
-
-# Install packages from requirements.txt
-with open(requirements_path) as f:
-    for line in f.readlines():
-        install(line.strip())
-
-
 import streamlit as st
 import pandas as pd
 import requests
