@@ -1,0 +1,24 @@
+# Frontend - Streamlit
+streamlit==1.24.0
+
+# Backend - FastAPI
+fastapi
+uvicorn[standard]
+
+# Generative AI - Hugging Face Transformers
+transformers
+torch  # PyTorch backend for Hugging Face models
+sentencepiece  # Required for some tokenizers
+
+# Word Cloud visualization
+wordcloud==1.9.2
+matplotlib==3.7.3  # For additional visualization support if needed
+
+# Common utilities
+pydantic  # Used by FastAPI for data validation
+requests  # For making HTTP requests
+numpy==1.24.3  # For numerical computations
+pandas==2.2.3  # For data handling
+
+# Optional but useful
+python-multipart  # For handling file uploads in FastAPI
