@@ -16,12 +16,13 @@
       ]
     }
   },
-  "postCreateCommand": [
-    "echo 'Installing Python dependencies...'",
-    "pip install --upgrade pip",  // Upgrade pip to avoid potential issues
-    "if [ -f requirements.txt ]; then pip install -r requirements.txt; else echo 'requirements.txt not found'; fi",  // Install dependencies from requirements.txt if present
-    "pip install --user streamlit",  // Install Streamlit explicitly if needed
-    "echo '✅ Packages installed and Requirements met'"
+   "postCreateCommand": [
+  "echo 'Installing Python dependencies...'",
+  "pip install --upgrade pip",  // Ensure pip is the latest version
+  "if [ -f Task/requirements.txt ]; then pip install -r Task/requirements.txt; else echo 'requirements.txt not found'; fi",  // Adjusted path
+  "pip install --user streamlit",  // Install Streamlit explicitly
+  "echo '✅ Packages installed and Requirements met'"
+
   ],
   "postAttachCommand": "streamlit run Task/FE/app.py --server.enableCORS false --server.enableXsrfProtection false",
   "portsAttributes": {
