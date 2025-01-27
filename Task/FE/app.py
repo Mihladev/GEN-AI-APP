@@ -1,14 +1,3 @@
-import subprocess
-import sys
-
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-with open('Task/requirements.txt') as f:
-    for line in f.readlines():
-        install(line.strip())
-
-
 import streamlit as st
 import pandas as pd
 import requests
